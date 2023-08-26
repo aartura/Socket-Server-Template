@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-const serverPort = process.env.PORT || 3000;
+const serverPort = process.env.PORT || 5000;
 
 const WebSocket = require("ws");
 
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!!!');
 });
 
-const API = "http://yerkee.com/api/fortune";
+let api =''
 const wss = new WebSocket.Server(
   {
     port: serverPort,
