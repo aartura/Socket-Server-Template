@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-const serverPort = 5000;
+const serverPort = process.env.PORT || 3000;
 
 const WebSocket = require("ws");
 
